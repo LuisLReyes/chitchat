@@ -6,7 +6,8 @@ const mongoose = require('mongoose');
 const chatroomRoutes = express.Router();
 const chatlogRoutes = express.Router();
 const userRoutes = express.Router();
-const session = require('express-session')
+const session = require('express-session');
+const path = require('path');
 const PORT = 4000;
 
 let Chatroom = require('./models/chatroom.model');
@@ -34,8 +35,21 @@ app.use(function(req, res, next) {
     next();
   });
   
+//Static file declaration
+app.use(express.static(path.join(__dirname, 'client/build')));
 
+/*production mode
+if(process.env.NODE_ENV === 'production') {  
+    app.use(express.static(path.join(__dirname, 'client/build')));  
+    app.get('*', (req, res) => {    
+        res.sendfile(path.join(__dirname = 'client/build/index.html'));  
+    })
+};
 
+//build
+app.get('*', (req, res) => {  
+    res.sendFile(path.join(__dirname+'/client/public/index.html'));
+});*/
 
 //Chatroom Functions
 //Get all chatrooms
