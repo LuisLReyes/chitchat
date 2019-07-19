@@ -8,7 +8,7 @@ const chatlogRoutes = express.Router();
 const userRoutes = express.Router();
 const session = require('express-session');
 const path = require('path');
-const PORT = 4000;
+const PORT = process.env.PORT || 4000;
 
 let Chatroom = require('./models/chatroom.model');
 let User = require('./models/users.model');
