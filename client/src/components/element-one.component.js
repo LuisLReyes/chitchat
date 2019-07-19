@@ -2,16 +2,18 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
 
+const PORT = process.env.PORT || 4000;
+
 export default class ElementOne extends Component {
 
     apiTester(){
-        axios.get('http://localhost:4000/user/5d23a48fc543581b901b4bb5')
+        axios.get('http://localhost:'+PORT+'/user/5d23a48fc543581b901b4bb5')
             .then(res => {
                 console.log(res.data);
             })
     }
     loginTester(){
-        axios.post('http://localhost:4000/user/login',{
+        axios.post('http://localhost:'+PORT+'/user/login',{
             user_name: 'Luis1234',
             password: 'hashtesting'
         })
