@@ -36,7 +36,7 @@ app.use(function(req, res, next) {
   });
   
 //Static file declaration
-app.use(express.static(path.join(__dirname, 'client/build')));
+app.use(express.static(path.join(__dirname, 'client','build')));
 
 /*production mode
 if(process.env.NODE_ENV === 'production') {  
@@ -170,6 +170,10 @@ userRoutes.get('/logout', function (req,res,next){
 app.use('/chatroom', chatroomRoutes);
 app.use('/chatlog', chatlogRoutes);
 app.use('/user', userRoutes);
+
+app.get("*", (req, res) => {
+    res.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
 
 app.listen(PORT, function() {
     console.log("Server is running on Port: " + PORT);
