@@ -27,7 +27,7 @@ export default class ElementOne extends Component {
     }
 
     handleLogin(event){
-      console.log('Username ' + this.state.username + ' with the password ' + this.state.value + ' has logged in');
+      console.log('Username ' + this.state.username + ' with the password ' + this.state.password + ' has logged in');
     }
 
 
