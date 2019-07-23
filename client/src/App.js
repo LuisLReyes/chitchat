@@ -6,6 +6,9 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import elementLogin from "./components/login.component";
 import elementHome from "./components/home.component";
 import elementAddGroup from "./components/addgroup.component";
+import elementNewGroup from "./components/newgroup.component";
+import elementEditGroup from "./components/editgroup.component";
+import elementGroup from "./components/group.component";
 import elementOne from "./components/element-one.component";
 
 
@@ -54,6 +57,9 @@ class App extends Component {
               <Route path="/login" component={elementLogin} />
               <Route path="/addgroup" component={elementAddGroup} />
               <Route path="/testing" component={elementOne} />
+              <Route path="/newgroup" component={elementNewGroup} />
+              <Route path="/editgroup/:id" component={elementEditGroup} />
+              <Route path="/group/:id" component={elementGroup} />
             </div>
           </div>
         </div>
