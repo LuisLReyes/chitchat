@@ -28,7 +28,7 @@ export default class ElementFive extends Component {
     });
   }
 
-  createGroup(event){
+  editGroup(event){
     console.log('Group ' + this.state.groupName + ' with Topic ' + this.state.groupTopic + ' edited');
   }
 
@@ -57,7 +57,7 @@ export default class ElementFive extends Component {
                 />
               </label>
             </div>
-            <button className="btn btn-primary btn-block" onClick={this.createGroup} >Save Changes</button>
+            <button className="btn btn-primary btn-block" onClick={this.editGroup} >Save Changes</button>
 
           </div>
       )
