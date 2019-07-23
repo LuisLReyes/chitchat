@@ -13,7 +13,7 @@ export default class ElementFive extends Component {
 
       this.changeGroupName = this.changeGroupName.bind(this);
       this.changeGroupTopic = this.changeGroupTopic.bind(this);
-      this.createGroup = this.createGroup.bind(this);
+      this.editGroup = this.editGroup.bind(this);
   }
 
   changeGroupName(event){
