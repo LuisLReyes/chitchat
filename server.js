@@ -16,11 +16,26 @@ let User = require('./models/users.model');
 app.use(cors()); 
 app.use(bodyParser.json());
 
+//initialize session
 app.use(session({
+    key: 'user_sid',
     secret: 'pilebunker',
-    resave: true,
-    saveUninitialized: false
-  }));
+    resave: false,
+    saveUninitialized: false,
+    cookie: {
+        expires: 600000
+    }
+}));
+
+//Check for logged in user
+var sessionChecker = (req, res, next) => {
+    if (req.session.user && req.cookies.user_sid) {
+        //res.redirect('/dashboard');
+    } else {
+        next();
+    }    
+};
+
 
 mongoose.connect('mongodb://group15:group15password@ds119660.mlab.com:19660/heroku_t5txprc7', { useNewUrlParser: true });
 const connection = mongoose.connection;
@@ -147,8 +162,7 @@ userRoutes.route('/login').post(function(req,res){
             console.log('Failed user: ' + user);
             return res.status(401).json({'message':'Login failed'});
         } else {
-            req.session.userId = user._id;
-            console.log('Logging in user' + user._id);
+            req.session.user = user;
             return res.status(200).json({'message':'Login Successful'});
         }
     })

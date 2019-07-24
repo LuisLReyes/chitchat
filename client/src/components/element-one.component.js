@@ -14,12 +14,13 @@ export default class ElementOne extends Component {
     }
     loginTester(){
         axios.post('http://localhost:'+PORT+'/user/login',{
-            user_name: 'Luis1234',
-            password: 'hashtesting'
+            user_name: 'llreyes',
+            password: 'asdf'
         })
         .then(res=> {
             console.log(res.data);
-        })
+        });
+        console.log("Session Info: " + session.userId);
     }
 
     render() {
