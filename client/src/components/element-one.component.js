@@ -20,7 +20,6 @@ export default class ElementOne extends Component {
         .then(res=> {
             console.log(res.data);
         });
-        console.log("Session Info: " + session.userId);
     }
 
     render() {
