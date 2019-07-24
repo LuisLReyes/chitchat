@@ -1,5 +1,6 @@
 import React, { Component, } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from 'axios';
 
 export default class ElementOne extends Component {
 
@@ -26,10 +27,17 @@ export default class ElementOne extends Component {
       });
     }
 
-    handleLogin(event){
-      console.log('Username ' + this.state.username + ' with the password ' + this.state.password + ' has logged in');
+    handleLogin(event){ 
+      axios.post('http://chit-chat-4331.herokuapp.com/user/login',{
+            user_name: this.state.username,
+            password: this.state.pasword
+        })
+        .then(res=> {
+            console.log(res.data);
+        })
     }
 
+    
 
 
     render() {
