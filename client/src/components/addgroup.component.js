@@ -33,12 +33,12 @@ export default class ElementThree extends Component {
 	}
 
     render() {
-			const chatRoomNames = this.state.data.map(val => {
+			/*const chatRoomNames = this.state.data.map(val => {
 				return(
-					<h1>val.room_name<h1>
-					<h2>val.room_type<h2>
+						<h1>val.room_name<h1>
+						<h2>val.room_type<h2>
 				)
-			}) 
+			}) */
 			
         return (
             <div>
@@ -47,7 +47,6 @@ export default class ElementThree extends Component {
                 </button>
 
                 <input type="text" className="form-control" placeholder="Search Group" aria-label="Search" />
-								{chatRoomNames}
             </div>
         )
     }
