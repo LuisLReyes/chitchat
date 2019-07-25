@@ -29,7 +29,7 @@ export default class ElementOne extends Component {
 
     handleLogin(event){ 
       console.log("api test");
-      axios.post('http://chit-chat-4331.herokuapp.com/user/login',{
+      axios.post('https://chit-chat-4331.herokuapp.com/user/login',{
             user_name: this.state.username,
             password: this.state.pasword
         })
