@@ -47,7 +47,6 @@ export default class ElementThree extends Component {
                 </button>
 
                 <input type="text" className="form-control" placeholder="Search Group" aria-label="Search" />
-								{this.fetchGroups}
 								{chatRoomNames}
             </div>
         )
