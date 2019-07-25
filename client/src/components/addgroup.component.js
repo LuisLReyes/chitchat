@@ -41,7 +41,6 @@ export default class ElementThree extends Component {
 
                 <input type="text" className="form-control" placeholder="Search Group" aria-label="Search" />
 
-								<ul>
             </div>
         )
     }
