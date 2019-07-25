@@ -44,7 +44,7 @@ export default class ElementOne extends Component {
     render() {
         return (
             <div>
-            <p>Welcome to Chit-Chat.</p>
+            <p>Welcome to Chit-Chat!</p>
             <p>Log in to have access for enhanced features</p>
                 <div className="row justify-content-center">
                   <div>
