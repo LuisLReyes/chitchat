@@ -7,16 +7,21 @@ export default class ElementThree extends Component {
 	constructor(props) {
 		super(props);
 		this.state = {
-			searchElement:''
+			searchElement:'',
+			data:''
 		}
 
 		this.changeSearchElement = this.changeSearchElement.bind(this);
 	}
 
+
 	fetchGroups(){
-		axios.get('https://chit-chat-4331.herokuapp.com/chatroom')
+		const chatRooms = axios.get('https://chit-chat-4331.herokuapp.com/chatroom')
 			.then(res => {
-				console.log(res.data);
+				this.setState({
+					data: res.data
+				});
+				console.log(this.state.data);
 			})
 	}
 
@@ -30,12 +35,16 @@ export default class ElementThree extends Component {
     render() {
         return (
             <div>
-                <button type="button"className="btn btn-primary btn-block mb-4" onClick={this.fetchGroups} > 
-                	Create New Study Group (Test)
+                <button type="button"className="btn btn-primary btn-block mb-4" onClick={this.fetchGroups} >
+                	Create New Study Group (Test 2)
                 </button>
 
                 <input type="text" className="form-control" placeholder="Search Group" aria-label="Search" />
+
+								<ul>
             </div>
         )
     }
+
+
 }
