@@ -27,9 +27,9 @@ export default class ElementOne extends Component {
       });
     }
 
-    handleLogin(event){ 
-      console.log("api test");
-      axios.post('http://chit-chat-4331.herokuapp.com/user/login',{
+    handleLogin(event){
+      console.log("api test username: " + this.state.username + " password: " + this.state.password);
+      axios.post('https://chit-chat-4331.herokuapp.com/user/login',{
             user_name: this.state.username,
             password: this.state.pasword
         })
@@ -38,13 +38,13 @@ export default class ElementOne extends Component {
         })
     }
 
-    
+
 
 
     render() {
         return (
             <div>
-            <p>Welcome to Chit-Chat!</p>
+            <p>Welcome to Chit-Chat!!!!</p>
             <p>Log in to have access for enhanced features</p>
                 <div className="row justify-content-center">
                   <div>
