@@ -31,7 +31,7 @@ export default class ElementOne extends Component {
       console.log("api test username: " + this.state.username + " password: " + this.state.password);
       axios.post('https://chit-chat-4331.herokuapp.com/user/login',{
             user_name: this.state.username,
-            password: this.state.pasword
+            password: this.state.password
         })
         .then(res=> {
             console.log(res.data);
@@ -44,7 +44,7 @@ export default class ElementOne extends Component {
     render() {
         return (
             <div>
-            <p>Welcome to Chit-Chat!!!!</p>
+            <p>Welcome to Chit-Chat!!!!!!!</p>
             <p>Log in to have access for enhanced features</p>
                 <div className="row justify-content-center">
                   <div>
