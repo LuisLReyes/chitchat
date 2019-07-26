@@ -45,6 +45,7 @@ export default class ElementOne extends Component {
         return (
             <div>
             <p>Welcome to Chit-Chat!!!!!!!</p>
+            <p>Welcome to Chit-Chat.</p>
             <p>Log in to have access for enhanced features</p>
                 <div className="row justify-content-center">
                   <div>
@@ -63,7 +64,7 @@ export default class ElementOne extends Component {
                       Password
                        <input
                         className="form-control"
-                        type="text" value={this.state.password}
+                        type="password" value={this.state.password}
                         id= {'setPassword'}
                         onChange={this.changePassword}
                       />
