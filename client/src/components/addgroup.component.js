@@ -8,22 +8,14 @@ export default class ElementThree extends Component {
 		super(props);
 		this.state = {
 			searchElement:'',
-			data:''
+			data:[]
 		}
 
 		this.changeSearchElement = this.changeSearchElement.bind(this);
+		this.joinRoom = this.joinRoom.bind(this);
 	}
 
 
-	fetchGroups(){
-		const chatRooms = axios.get('https://chit-chat-4331.herokuapp.com/chatroom')
-			.then(res => {
-				this.setState({
-					data: res.data
-				});
-				console.log(this.state.data);
-			})
-	}
 
 	changeSearchElement(event) {
 		this.setState({
@@ -32,13 +24,29 @@ export default class ElementThree extends Component {
 		});
 	}
 
+	joinRoom(data){
+		console.log("You have joined Room:" + data.room_name)
+}
+
+
+
+ 	componentDidMount(){
+		axios.get('https://chit-chat-4331.herokuapp.com/chatroom')
+			.then(res => {
+				this.setState({
+					data: res.data
+				});
+				console.log(this.state.data);
+				for(let i = 0; i < this.state.data.length; i++){
+					console.log(this.state.data[i].room_name + " " + this.state.data[i].room_type);
+				}
+			})
+ 	}
+
+
+
     render() {
-			/*const chatRoomNames = this.state.data.map(val => {
-				return(
-						<h1>val.room_name<h1>
-						<h2>val.room_type<h2>
-				)
-			}) */
+
 
         return (
             <div>
@@ -47,6 +55,20 @@ export default class ElementThree extends Component {
                 </button>
 
                 <input type="text" className="form-control" placeholder="Search Group" aria-label="Search" />
+
+		<br/>
+
+			{
+			 this.state.data.map((data) =>
+				 <div>
+					<button type="button" onClick={this.joinRoom(data)} className="btn btn-light btn-block">
+					 <h4>{data.room_name}</h4>
+					 <h6>Current Topic: {data.room_type}</h6>
+					</button>
+					 <br/>
+					</div>
+			 		)
+			 }
             </div>
         )
     }
