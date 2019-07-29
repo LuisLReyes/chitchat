@@ -142,6 +142,28 @@ userRoutes.route('/:id').get(function(req,res){
     });
 });
 
+//Add a chatroom to a user
+userRoutes.route('/addroom/:id').post(function(req,res){
+    let userid = req.params.id;
+    let roomid = req.body.roomid;
+    User.findById(userid, function(err, user){
+        if(!user){
+            res.status(404).send("Cannot find User with that ID.");
+        }
+        else{
+            User.updateOne(
+                { _id: userid},
+                { $push: {chatrooms: roomid} }
+            ).then(user => {
+                res.json('chatroom ID Added to user');
+            })
+            .catch(err=>{
+                res.status(400).send("Failed to add chatroom ID to user");
+            });
+        }
+    });
+});
+
 //Add a new user
 userRoutes.route('/add').post(function(req,res){
     let user = new User(req.body);
