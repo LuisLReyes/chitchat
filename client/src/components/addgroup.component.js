@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -51,21 +52,25 @@ export default class ElementThree extends Component {
                 	Create New Study Group
                 </button>
 
-                <input type="text" className="form-control" placeholder="Search Group" aria-label="Search" />
+                <input type="text" className="form-control" onChange={this.changeSearchElement} placeholder="Search Group" aria-label="Search" />
 
 		<br/>
 
 			{
-			 this.state.data.map((data) =>
-				 <div>
+			 this.state.data.map((data) =>{
+			 const regEx = new RegExp(this.state.searchElement, 'g');
+			 return (regEx.test(data.room_name) || regEx.test(data.room_type)) &&
+			 	( <div>
 					<button type="button" onClick={() => this.joinRoom(data)} className="btn btn-light btn-block">
 					 <h4>{data.room_name}</h4>
 					 <h6>Current Topic: {data.room_type}</h6>
 					</button>
 					 <br/>
 					</div>
-			 		)
-			 }
+				)
+				}
+			 )
+			}
             </div>
         )
     }
