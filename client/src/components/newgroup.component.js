@@ -1,5 +1,6 @@
 import React, { Component, } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
+import axios from 'axios';
 
 export default class ElementFour extends Component {
   constructor(props){
@@ -26,8 +27,15 @@ export default class ElementFour extends Component {
     });
   }
 
-  createGroup(event){
-    console.log('New Group ' + this.state.groupName + ' with Topic ' + this.state.groupTopic + ' created');
+  createGroup(){
+    axios.post('https://chit-chat-4331.herokuapp.com/chatroom/add',{
+       room_name: this.state.groupName,
+       room_type: this.state.groupTopic,
+       owner: "Test Owner"
+    })
+    .then(res=> {
+        console.log(res.data);
+    })
   }
 
   render() {
