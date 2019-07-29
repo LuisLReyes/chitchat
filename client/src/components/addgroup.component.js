@@ -37,9 +37,6 @@ export default class ElementThree extends Component {
 					data: res.data
 				});
 				console.log(this.state.data);
-				for(let i = 0; i < this.state.data.length; i++){
-					console.log(this.state.data[i].room_name + " " + this.state.data[i].room_type);
-				}
 			})
  	}
 
