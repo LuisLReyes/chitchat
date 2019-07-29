@@ -61,7 +61,7 @@ export default class ElementThree extends Component {
 			{
 			 this.state.data.map((data) =>
 				 <div>
-					<button type="button" onClick={this.joinRoom(data)} className="btn btn-light btn-block">
+					<button type="button" onClick={() => this.joinRoom(data)} className="btn btn-light btn-block">
 					 <h4>{data.room_name}</h4>
 					 <h6>Current Topic: {data.room_type}</h6>
 					</button>
