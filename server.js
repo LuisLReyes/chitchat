@@ -188,7 +188,7 @@ userRoutes.route('/login').post(function(req,res){
             return res.status(401).json({'message':'Login failed'});
         } else {
             req.session.user = user;
-            return res.status(200).json({'message':'Login Successful'});
+            return res.status(200).json(user);
         }
     })
 })
