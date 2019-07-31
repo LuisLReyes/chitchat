@@ -6,12 +6,16 @@ export default class ElementSix extends Component {
   //Contruct the element
   constructor(props){
     super(props);
+    this.textInput = React.createRef();
+    this.handleChange = this.handleChange.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
       //set variables to be access in the state
       this.state ={
         groupId:'',
         groupName:'',
         groupTopic:'',
         groupChat:null,
+        message:'',
         //Used to test tick
         seconds : 0
       }
@@ -44,6 +48,15 @@ export default class ElementSix extends Component {
     clearInterval(this.interval);
   }
 
+  handleChange(e){
+      this.setState({message: e.target.value})
+  }
+
+  handleSubmit(){
+      this.addMessageHelper(this.state.message, this.state.id)
+      console.log(this.state.message);
+      this.setState({message: ''})
+  }
   //Helper function to get group information
   GetGroupFromUrl(passedId){
     axios.get('https://chit-chat-4331.herokuapp.com/chatroom/'+passedId )
@@ -71,6 +84,8 @@ export default class ElementSix extends Component {
         return(
           <div>
             Seconds: {this.state.seconds}
+              <input type="text" ref={this.textInput} value={this.state.message} onChange={this.handleChange}/>
+              <button onClick={this.handleSubmit}/>
           </div>
         )
       }
