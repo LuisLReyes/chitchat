@@ -12,7 +12,10 @@ export default class ElementOne extends Component {
         email:'',
         first_name:'',
         last_name:'',
-        registerForm: false
+        passwordsMatch:false,
+        registerForm: false,
+        error: false,
+        error_message:''
       }
       this.changeUsername = this.changeUsername.bind(this);
       this.changePassword = this.changePassword.bind(this);
@@ -22,6 +25,7 @@ export default class ElementOne extends Component {
       this.handleLogin = this.handleLogin.bind(this);
       this.handleRegister = this.handleRegister.bind(this);
       this.changeForm = this.changeForm.bind(this);
+      this.verifyPassword = this.verifyPassword.bind(this);
     }
 
     changeUsername(event){
@@ -30,7 +34,7 @@ export default class ElementOne extends Component {
       });
     }
 
-  changePassword(event){
+    changePassword(event){
       this.setState({
         password: event.target.value
       });
@@ -52,6 +56,23 @@ export default class ElementOne extends Component {
       this.setState({
         last_name: event.target.value
       });
+    }
+
+    verifyPassword(event){
+      if( this.state.password != '' && this.state.password != null && event.target.value != null && event.target.value != '' && event.target.value != this.state.password ){
+        this.setState({
+          passwordsMatch: true,
+          error: true,
+          error_message: 'Passwords must match'
+        })
+      }
+      else{
+        this.setState({
+          passwordsMatch: true,
+          error: false
+        })
+      }
+
     }
 
     handleLogin(){
@@ -80,7 +101,8 @@ export default class ElementOne extends Component {
 
     changeForm(){
       this.setState({
-        registerForm: !this.state.registerForm
+        registerForm: !this.state.registerForm,
+        error: false
       })
     }
 
@@ -92,7 +114,13 @@ export default class ElementOne extends Component {
             <div>
             <p>Welcome to Chit-Chat.</p>
             <p>Log in to have access to enhanced features</p>
-              <br/>
+            <div>
+              {
+                this.state.error &&
+                  <div className="alert alert-danger">{this.state.error_message}</div>
+              }
+            </div>
+
                 <div className="row justify-content-center">
                   <div>
 
@@ -162,6 +190,22 @@ export default class ElementOne extends Component {
                       />
                     </label>
                     </div>
+
+                    <div>
+                    {
+                      this.state.registerForm &&
+                      (
+                        <label>
+                          Verify Password
+                          <input
+                            className="form-control"
+                            type="password"
+                            onChange={this.verifyPassword}
+                          />
+                        </label>
+                      )
+                    }
+                    </div>
               </div>
           </div>
 
@@ -169,9 +213,9 @@ export default class ElementOne extends Component {
                   <div className="col-4">
                     {
                       this.state.registerForm ?
-                        (  <button className="btn btn-info btn-block" onClick={this.handleRegister} >Register</button>)
+                        (  <button className="btn btn-info btn-block" disabled={!this.state.username || !this.state.first_name || !this.state.email || !this.state.passwordsMatch} onClick={this.handleRegister} >Register</button>)
                         :
-                        (<button className="btn btn-primary btn-block" onClick={this.handleLogin} >Login</button>)
+                        (<button className="btn btn-primary btn-block" disabled={!this.state.username || !this.state.password} onClick={this.handleLogin} >Login</button>)
                     }
 
                     <br/>
