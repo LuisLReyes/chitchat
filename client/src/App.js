@@ -14,26 +14,63 @@ import elementOne from "./components/element-one.component";
 
 class App extends Component {
 
+  constructor(props) {
+		super(props);
+		this.state = {
+      user_name:'',
+      first_name:'',
+      last_name:'',
+      password:'',
+      email:'',
+      name_element:'',
+      temp_name:'Anonymous',
+      registerForm:false,
+      loginForm: false,
+      loggedIn:false,
+		}
+
+    this.changeName = this.changeName.bind(this);
+    this.setName = this.setName.bind(this);
+  }
 
 
+  changeName(event){
+    this.setState({
+      name_element: event.target.value
+    });
+  }
+
+  setName(){
+    this.setState({
+      temp_name: this.state.name_element
+    });
+  }
 
   render() {
     return (
       <Router>
 
-        <div className="container">
+        <div className="container justify-content-between">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" href="https://google.com" target="_blank">
               {/*<img src={} width="30" height="30" alt="google.com" />*/}
             </a>
-            <Link to="/" className="navbar-brand">Skeleton for Group 15</Link>
-            <div className="collpase navbar-collapse">
-              <ul className="navbar-nav mr-auto">
-                <li className="navbar-item">
-                  <Link to="/login" className="nav-link">Login</Link>
-                </li>
-              </ul>
-            </div>
+              <div className="col-7">
+                <Link to="/" className="navbar-brand">Hello, {this.state.temp_name}</Link>
+              </div>
+              <div className="col-6 collapse navbar-collapse">
+                <ul className="navbar-nav mr-auto">
+                    <li className="navbar-item">
+                      <div className="input-group">
+                        <input type="text" className="form-control ml-5" value={this.state.name_element} onChange={this.changeName} placeholder="Enter Name" />
+                        <div className="input-group-append"><button onClick={this.setName} disabled={!this.state.name_element} className="btn btn-dark btn-sm">Change Name</button></div>
+                      </div>
+                    </li>
+                    <li className="navbar-item">
+                      <Link className="nav-link">Login</Link>
+                    </li>
+                </ul>
+              </div>
           </nav>
           <br/>
           <div className="row">
@@ -43,9 +80,9 @@ class App extends Component {
                   <p>Your Groups   </p>
                 </div>
                 <div className="col">
-                  <button className="btn-primary btn-sm">
+                  <Link to="/addgroup" className="btn-primary btn-sm">
                     +
-                  </button>
+                  </Link>
                 </div>
               </div>
             </div>
