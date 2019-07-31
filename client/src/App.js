@@ -3,12 +3,11 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import elementLogin from "./components/login.component";
+import elementRegister from "./components/register.component";
 import elementHome from "./components/home.component";
-import elementAddGroup from "./components/addgroup.component";
-import elementNewGroup from "./components/newgroup.component";
-import elementEditGroup from "./components/editgroup.component";
-import elementGroup from "./components/group.component";
+import elementAddRoom from "./components/addroom.component";
+import elementNewRoom from "./components/newroom.component";
+import elementRoom from "./components/room.component";
 import elementOne from "./components/element-one.component";
 
 
@@ -80,7 +79,7 @@ class App extends Component {
                   <p>Your Groups   </p>
                 </div>
                 <div className="col">
-                  <Link to="/addgroup" className="btn-primary btn-sm">
+                  <Link to="/addroom" className="btn-primary btn-sm">
                     +
                   </Link>
                 </div>
@@ -88,12 +87,11 @@ class App extends Component {
             </div>
             <div className="col-8">
               <Route path="/" exact component={elementHome} />
-              <Route path="/login" component={elementLogin} />
-              <Route path="/addgroup" component={elementAddGroup} />
+              <Route path="/register" component={elementRegister} />
+              <Route path="/addroom" component={elementAddRoom} />
               <Route path="/testing" component={elementOne} />
-              <Route path="/newgroup" component={elementNewGroup} />
-              <Route path="/editgroup/:id" component={elementEditGroup} />
-              <Route path="/group/:id" component={elementGroup} />
+              <Route path="/newroom" component={elementNewRoom} />
+              <Route path="/room/:id" component={elementRoom} />
             </div>
           </div>
         </div>
