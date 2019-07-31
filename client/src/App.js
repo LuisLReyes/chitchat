@@ -66,7 +66,6 @@ class App extends Component {
                       </div>
                     </li>
                     <li className="navbar-item">
-                      <Link className="nav-link">Login</Link>
                     </li>
                 </ul>
               </div>
