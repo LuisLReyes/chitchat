@@ -16,15 +16,9 @@ class App extends Component {
   constructor(props) {
 		super(props);
 		this.state = {
-      user_name:'',
-      first_name:'',
-      last_name:'',
-      password:'',
-      email:'',
+      user:'',
       name_element:'',
-      temp_name:'Anonymous',
-      registerForm:false,
-      loginForm: false,
+      name:'Anonymous',
       loggedIn:false,
 		}
 
@@ -41,7 +35,7 @@ class App extends Component {
 
   setName(){
     this.setState({
-      temp_name: this.state.name_element
+      name: this.state.name_element
     });
   }
 
@@ -55,7 +49,7 @@ class App extends Component {
               {/*<img src={} width="30" height="30" alt="google.com" />*/}
             </a>
               <div className="col-7">
-                <Link to="/" className="navbar-brand">Hello, {this.state.temp_name}</Link>
+                <Link to="/" className="navbar-brand">Hello, {this.state.name}</Link>
               </div>
               <div className="col-6 collapse navbar-collapse">
                 <ul className="navbar-nav mr-auto">
@@ -66,7 +60,7 @@ class App extends Component {
                       </div>
                     </li>
                     <li className="navbar-item">
-	    		  <Link to="/login" className="nav-link">Login</Link>
+                      <Link to="/login" className="nav-link">Login</Link>
                     </li>
                 </ul>
               </div>
@@ -74,16 +68,18 @@ class App extends Component {
           <br/>
           <div className="row">
             <div className="col-3">
+              <div className="alert alert-secondary">
               <div className="row">
                 <div className="col">
-                  <p>Your Groups   </p>
+                  <p className="mr-1">Your Rooms</p>
                 </div>
                 <div className="col">
-                  <Link to="/addroom" className="btn-primary btn-sm">
+                  <Link to="/addroom" className="btn-primary btn-sm ml-5">
                     +
                   </Link>
                 </div>
               </div>
+            </div>
             </div>
             <div className="col-8">
               <Route path="/" exact component={elementHome} />
