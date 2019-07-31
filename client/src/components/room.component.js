@@ -20,6 +20,8 @@ export default class ElementSix extends Component {
         //Used to test tick
         seconds : 0
       }
+
+    
   }
   //Tick function that goes off every X milliseconds that are specified in componentDidMount()
   tick() {
@@ -28,7 +30,7 @@ export default class ElementSix extends Component {
       seconds: prevState.seconds + 1
     }));
     //Uncomment this line to repeatedly update the chat information every second
-    //this.GetGroupFromUrl(this.state.groupId);
+    this.GetGroupFromUrl(this.state.groupId);
   }
 
   //On successful "mount" (load), complete the following
@@ -42,6 +44,8 @@ export default class ElementSix extends Component {
     console.log(`Room ID in URL: ${params.id}`);
     //Call function using ID in URL
     this.GetGroupFromUrl(params.id);
+
+    
   }
 
   componentWillUnmount() {
@@ -71,6 +75,9 @@ export default class ElementSix extends Component {
             this.state.groupChat = res.data.chat_log;
             //log the state to ensure everything is working as intended
             console.log(this.state);
+            this.chat = this.state.groupChat.map((item,key) =>
+              <li key ={item.id}>{item.user}: {item.message}</li>
+            );
         })
   }
   //untested function to add chat messages
@@ -87,6 +94,10 @@ export default class ElementSix extends Component {
             Seconds: {this.state.seconds}
               <input type="text" ref={this.textInput} value={this.state.message} onChange={this.handleChange}/>
               <button onClick={this.handleSubmit}/>
+              <p>
+                {this.chat}
+              </p>
+              
           </div>
         )
       }
