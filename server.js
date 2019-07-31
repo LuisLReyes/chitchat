@@ -12,7 +12,7 @@ const PORT = process.env.PORT || 4000;
 
 let Chatroom = require('./models/chatroom.model');
 let User = require('./models/users.model');
-let Chatlog = require('.models/chatlog.model');
+let Chatlog = require('./models/chatlog.model');
 
 app.use(cors()); 
 app.use(bodyParser.json());
