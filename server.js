@@ -12,6 +12,7 @@ const PORT = process.env.PORT || 4000;
 
 let Chatroom = require('./models/chatroom.model');
 let User = require('./models/users.model');
+let Chatlog = require('.models/chatlog.model');
 
 app.use(cors()); 
 app.use(bodyParser.json());
@@ -21,14 +22,14 @@ app.use(function(req, res, next) {
     res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
     next();
   });
-  
+
 //initialize session
 app.use(session({
     key: 'user_sid',
     secret: 'pilebunker',
     resave: false,
     saveUninitialized: false,
-    cookie: {
+    cookie: { 
         expires: 600000
     }
 }));
