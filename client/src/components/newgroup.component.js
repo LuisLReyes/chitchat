@@ -1,4 +1,5 @@
 import React, { Component, } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
 
@@ -7,7 +8,9 @@ export default class ElementFour extends Component {
     super(props);
       this.state ={
         groupName:'',
-        groupTopic:''
+        groupTopic:'',
+        error: false,
+        errorMessage: '',
       }
 
       this.changeGroupName = this.changeGroupName.bind(this);
@@ -28,14 +31,25 @@ export default class ElementFour extends Component {
   }
 
   createGroup(){
-    axios.post('https://chit-chat-4331.herokuapp.com/chatroom/add',{
-       room_name: this.state.groupName,
-       room_type: this.state.groupTopic,
-       owner: "Test Owner"
-    })
-    .then(res=> {
-        console.log(res.data);
-    })
+    if(this.state.groupName == null || this.state.groupName == '' || this.state.groupTopic == null || this.state.groupTopic == ''){
+      this.setState({
+        error: true,
+        errorMessage: 'You Must Include Both a name and a topic for your new study group'
+      });
+        console.log(":(");
+    }
+    else{
+
+        this.error = false;
+        axios.post('https://chit-chat-4331.herokuapp.com/chatroom/add',{
+         room_name: this.state.groupName,
+         room_type: this.state.groupTopic,
+         owner: "Test Owner"
+      })
+      .then(res=> {
+          console.log(res.data);
+      })
+    }
   }
 
   render() {
@@ -64,6 +78,13 @@ export default class ElementFour extends Component {
               </label>
             </div>
             <button className="btn btn-primary btn-block" onClick={this.createGroup} >Create New Group!</button>
+
+            <br/>
+            {
+              this.state.error &&
+                <div className="alert alert-danger">{this.state.errorMessage}</div>
+
+              }
 
           </div>
       )
