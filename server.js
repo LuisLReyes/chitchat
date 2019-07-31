@@ -193,6 +193,11 @@ userRoutes.route('/login').post(function(req,res){
     })
 })
 
+//return the loggedin user
+userRoutes.route('/loggedin').get(function(req,res){
+    res.json(req.session.user);
+})
+
 //Logout and kill the session
 userRoutes.get('/logout', function (req,res,next){
     if(req.session){
