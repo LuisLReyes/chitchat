@@ -16,6 +16,7 @@ export default class ElementSix extends Component {
         groupTopic:'',
         groupChat:null,
         message:'',
+        user:'testuser',
         //Used to test tick
         seconds : 0
       }
@@ -53,7 +54,7 @@ export default class ElementSix extends Component {
   }
 
   handleSubmit(){
-      this.addMessageHelper(this.state.message, this.state.groupId)
+      this.addMessageHelper({'user':this.state.user, 'message':this.state.message}, this.state.groupId)
       console.log(this.state.message);
       this.setState({message: ''})
   }
