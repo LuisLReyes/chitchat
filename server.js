@@ -16,6 +16,12 @@ let User = require('./models/users.model');
 app.use(cors()); 
 app.use(bodyParser.json());
 
+app.use(function(req, res, next) {
+    res.header("Access-Control-Allow-Origin", "*");
+    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    next();
+  });
+  
 //initialize session
 app.use(session({
     key: 'user_sid',
@@ -44,11 +50,7 @@ connection.once('open', function() {
     console.log("MongoDB database connection established successfully");
 });
 
-app.use(function(req, res, next) {
-    res.header("Access-Control-Allow-Origin", "*");
-    res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
-    next();
-  });
+
   
 //Static file declaration
 app.use(express.static(path.join(__dirname, 'client','build')));

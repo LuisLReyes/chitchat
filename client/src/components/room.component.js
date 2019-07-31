@@ -53,7 +53,7 @@ export default class ElementSix extends Component {
   }
 
   handleSubmit(){
-      this.addMessageHelper(this.state.message, this.state.id)
+      this.addMessageHelper(this.state.message, this.state.groupId)
       console.log(this.state.message);
       this.setState({message: ''})
   }
@@ -74,7 +74,7 @@ export default class ElementSix extends Component {
   }
   //untested function to add chat messages
   addMessageHelper(passedMessage, passedId){
-    axios.post('https://chit-chat-4331.herokuapp.com/chatroom/newmessage/' + passedId ,passedMessage)
+    axios.post('https://chit-chat-4331.herokuapp.com/chatroom/newmessage/' + passedId , passedMessage )
     .then(res=> {
         console.log(res.data);
     });
