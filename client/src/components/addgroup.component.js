@@ -1,5 +1,6 @@
 
 import React, { Component } from 'react';
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import axios from 'axios';
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -48,9 +49,9 @@ export default class ElementThree extends Component {
 
         return (
             <div>
-                <button type="button"className="btn btn-primary btn-block mb-4">
+                <Link to="/newgroup" className="btn btn-primary btn-block mb-4">
                 	Create New Study Group
-                </button>
+                </Link>
 
                 <input type="text" className="form-control" onChange={this.changeSearchElement} placeholder="Search Group" aria-label="Search" />
 
@@ -59,12 +60,13 @@ export default class ElementThree extends Component {
 			{
 			 this.state.data.map((data) =>{
 			 const regEx = new RegExp(this.state.searchElement, 'g');
+			 let roomLink = "/group/" + data._id;
 			 return (regEx.test(data.room_name) || regEx.test(data.room_type)) &&
 			 	( <div>
-					<button type="button" onClick={() => this.joinRoom(data)} className="btn btn-light btn-block">
+					<Link to={roomLink} onClick={() => this.joinRoom(data)} className="btn btn-light btn-block">
 					 <h4>{data.room_name}</h4>
 					 <h6>Current Topic: {data.room_type}</h6>
-					</button>
+					</Link>
 					 <br/>
 					</div>
 				)
