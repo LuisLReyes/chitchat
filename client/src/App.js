@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 import "bootstrap/dist/css/bootstrap.min.css";
 
-import elementRegister from "./components/register.component";
+import elementLogin from "./components/login.component";
 import elementHome from "./components/home.component";
 import elementAddRoom from "./components/addroom.component";
 import elementNewRoom from "./components/newroom.component";
@@ -66,6 +66,7 @@ class App extends Component {
                       </div>
                     </li>
                     <li className="navbar-item">
+	    		  <Link to="/login" className="nav-link">Login</Link>
                     </li>
                 </ul>
               </div>
@@ -86,7 +87,7 @@ class App extends Component {
             </div>
             <div className="col-8">
               <Route path="/" exact component={elementHome} />
-              <Route path="/register" component={elementRegister} />
+              <Route path="/login" component={elementLogin} />
               <Route path="/addroom" component={elementAddRoom} />
               <Route path="/testing" component={elementOne} />
               <Route path="/newroom" component={elementNewRoom} />
