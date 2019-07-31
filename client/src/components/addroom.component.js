@@ -49,18 +49,18 @@ export default class ElementThree extends Component {
 
         return (
             <div>
-                <Link to="/newgroup" className="btn btn-primary btn-block mb-4">
-                	Create New Study Group
+                <Link to="/newroom" className="btn btn-primary btn-block mb-4">
+                	Create New Study Room
                 </Link>
 
-                <input type="text" className="form-control" onChange={this.changeSearchElement} placeholder="Search Group" aria-label="Search" />
+                <input type="text" className="form-control" onChange={this.changeSearchElement} placeholder="Search Rooms" aria-label="Search" />
 
 		<br/>
 
 			{
 			 this.state.data.map((data) =>{
 			 const regEx = new RegExp(this.state.searchElement, 'g');
-			 let roomLink = "/group/" + data._id;
+			 let roomLink = "/room/" + data._id;
 			 return (regEx.test(data.room_name) || regEx.test(data.room_type)) &&
 			 	( <div>
 					<Link to={roomLink} onClick={() => this.joinRoom(data)} className="btn btn-light btn-block">
