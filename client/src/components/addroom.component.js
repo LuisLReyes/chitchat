@@ -57,7 +57,7 @@ export default class ElementThree extends Component {
                   <p className="mr-1">Your Rooms</p>
                 </div>
                 <div className="col">
-                  <Link to="/addroom" className="btn-primary btn-sm ml-5">
+                  <Link to="/newroom" className="btn-primary btn-sm ml-5">
                     +
                   </Link>
                 </div>

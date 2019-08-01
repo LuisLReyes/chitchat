@@ -44,10 +44,10 @@ export default class ElementFour extends Component {
         axios.post('https://chit-chat-4331.herokuapp.com/chatroom/add',{
          room_name: this.state.groupName,
          room_type: this.state.groupTopic,
-         owner: "Test Owner"
+         owner: JSON.parse(localStorage.getItem('user'))._id
       })
       .then(res=> {
-          console.log(res.data);
+        this.props.history.push("/room/"+ res.data);
       })
     }
   }
@@ -57,7 +57,7 @@ export default class ElementFour extends Component {
           <div className="row">
             <div>
               <label>
-                Group Name
+                Room Name
                 <input
                   className="form-control"
                   type="text" value={this.state.groupName}
@@ -77,7 +77,7 @@ export default class ElementFour extends Component {
                 />
               </label>
             </div>
-            <button className="btn btn-primary btn-block" onClick={this.createGroup} >Create New Group!</button>
+            <button className="btn btn-primary btn-block" onClick={this.createGroup} >Create New Room!</button>
 
             <br/>
             {

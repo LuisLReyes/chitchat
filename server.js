@@ -95,7 +95,7 @@ chatroomRoutes.route('/add').post(function(req,res){
     let chatroom = new Chatroom(req.body);
     chatroom.save()
         .then(chatroom => {
-            res.status(200).json({'message':'chatroom added successfully'});
+            res.status(200).json({chatroom}.chatroom._id);
         })
         .catch(err => {
             res.status(400).send('adding new chat failed');
