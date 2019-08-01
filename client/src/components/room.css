@@ -3,8 +3,14 @@
     background-color: aliceblue;
     padding-top: 1em;
     padding-bottom: 1em;
+    height: 500px;
 }
 
 .message{
+    margin-left: 1em;
+    color: #090909;
+}
 
+.center{
+    margin-bottom: 20px;
 }

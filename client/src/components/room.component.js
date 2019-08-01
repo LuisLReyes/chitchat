@@ -103,7 +103,7 @@ export default class ElementSix extends Component {
             console.log(this.state);
             this.chat = this.state.groupChat.map((item,key) =>
                 <div class="message">
-                    <p key ={item.id}>{item.user}: {item.message}</p>
+                    <p key ={item.id}><b>{item.user}</b>: {item.message}</p>
                 </div>
             );
         })
@@ -120,8 +120,8 @@ export default class ElementSix extends Component {
         return(
         <div className="row">
 
-          <div className="col-9">
-            <div>
+          <div className="col-10 offset-1">
+            <div class="center">
             {
                 (!localStorage.getItem('user')) &&
                   (<div className="input-group">
