@@ -64,7 +64,7 @@ class App extends Component {
                 (!localStorage.getItem('user')) &&
                   (<ul className="navbar-nav mr-auto">
                     <li className="navbar-item">
-                      <Link to="/login" className="btn btn-outline-dark">Login</Link>
+                      <Link to="/login" className="btn btn-outline-dark ml-5">Login</Link>
                     </li>
                 </ul>)
               }
@@ -72,7 +72,7 @@ class App extends Component {
                 (localStorage.getItem('user')) &&
                 (<ul className="navbar-nav mr-auto">
                   <li className="navbar-item">
-                   <button className="btn btn-outline-dark" onClick={this.logOut}>Logout</button>
+                   <button className="btn btn-outline-dark ml-5" onClick={this.logOut}>Logout</button>
                    </li>
                    </ul>
                 )
