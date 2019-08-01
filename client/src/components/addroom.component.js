@@ -49,16 +49,8 @@ export default class ElementThree extends Component {
 
         return (
 			
-            <div class="row">
-				<div className="col-3">
-            <div className="alert alert-secondary">
-              <div className="row">
-                <div className="col">
-                  <p className="mr-1">Your Rooms</p>
-                </div>
-              </div>
-            </div>
-          </div>
+            <div class="row justify-content-center">
+				
 		  <div className="col-9">
 		{
 		(localStorage.getItem('user')) &&
