@@ -14,7 +14,7 @@ class App extends Component {
 
   constructor(props) {
 		super(props);
-    
+
     var temp;
       if(localStorage.getItem('user')){
         temp = JSON.parse(localStorage.getItem('user')).first_name;
@@ -22,8 +22,8 @@ class App extends Component {
       else{
         temp = 'Anonymous';
       }
-    
-    
+
+
     this.state = {
       user:'',
       name_element:'',
@@ -31,7 +31,7 @@ class App extends Component {
       loggedIn:false,
 		}
 
-    
+    this.logOut = this.logOut.bind(this);
 
     console.log("Checking for logged in user in App.js...");
     console.log(JSON.parse(localStorage.getItem('user')));
@@ -39,9 +39,13 @@ class App extends Component {
   }
 
 
-  
+  logOut(){
+    localStorage.setItem('user', null);
+    localStorage.clear();
+    window.location.reload();
+  }
 
-  
+
 
   render() {
     return (
@@ -70,20 +74,20 @@ class App extends Component {
                   <li className="navbar-item">
                    <button className="btn btn-outline-dark" onClick={this.logOut}>Logout</button>
                    </li>
-                </ul>
+                   </ul>
                 )
               }
 
               </div>
           </nav>
           <br/>
-            
+
               <Route path="/" exact component={elementRooms} />
               <Route path="/login" component={elementLogin} />
               <Route path="/rooms" component={elementRooms} />
               <Route path="/newroom" component={elementNewRoom} />
               <Route path="/room/:id" component={elementRoom} />
-            
+
         </div>
       </Router>
     );
