@@ -85,7 +85,7 @@ export default class ElementOne extends Component {
         })
         .then(res=> {
             console.log(res.data);
-            localStorage.setItem('user',JSON.stringify(res.data._id));
+            localStorage.setItem('user',JSON.stringify(res.data));
         })
         .catch(error =>{
           this.setState({
