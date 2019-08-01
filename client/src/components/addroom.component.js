@@ -56,7 +56,10 @@ export default class ElementThree extends Component {
                 <div className="col">
                   <p className="mr-1">Your Rooms</p>
                 </div>
-                <div className="col">
+              </div>
+            </div>
+          </div>
+		  <div className="col-9">
 		{
 		(localStorage.getItem('user')) &&
                 	(<Link to="/newroom" className="btn btn-primary btn-block mb-4">
@@ -64,14 +67,6 @@ export default class ElementThree extends Component {
                 	</Link>
 		)
 		}
-                </div>
-              </div>
-            </div>
-          </div>
-		  <div className="col-9">
-                <Link to="/newroom" className="btn btn-primary btn-block mb-4">
-                	Create New Study Room
-                </Link>
 
                 <input type="text" className="form-control" onChange={this.changeSearchElement} placeholder="Search Rooms" aria-label="Search" />
 
