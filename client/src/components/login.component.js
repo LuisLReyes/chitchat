@@ -128,6 +128,7 @@ export default class ElementOne extends Component {
                       Username
                       <input
                         className="form-control"
+                        placeholder="username"
                         type="text" value={this.state.username}
                         onChange={this.changeUsername}
                       />
@@ -140,6 +141,7 @@ export default class ElementOne extends Component {
                           Email
                           <input
                             className="form-control"
+                            placeholder="johndoe@email.com"
                             type="text" value={this.state.email}
                             onChange={this.changeEmail}
                           />
@@ -156,6 +158,7 @@ export default class ElementOne extends Component {
                           First Name
                           <input
                             className="form-control"
+                            placeholder="John"
                             type="text" value={this.state.first_name}
                             onChange={this.changeFirstName}
                           />
@@ -172,6 +175,7 @@ export default class ElementOne extends Component {
                           Last Name
                           <input
                             className="form-control"
+                            placeholder="doe"
                             type="text" value={this.state.last_name}
                             onChange={this.changeLastName}
                           />
@@ -185,6 +189,7 @@ export default class ElementOne extends Component {
                       Password
                        <input
                         className="form-control"
+                        placeholder="password"
                         type="password" value={this.state.password}
                         onChange={this.changePassword}
                       />
@@ -199,6 +204,7 @@ export default class ElementOne extends Component {
                           Verify Password
                           <input
                             className="form-control"
+                            placeholder="password"
                             type="password"
                             onChange={this.verifyPassword}
                           />
