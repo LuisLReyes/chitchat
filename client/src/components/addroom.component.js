@@ -71,13 +71,13 @@ export default class ElementThree extends Component {
                 <input type="text" className="form-control" onChange={this.changeSearchElement} placeholder="Search Rooms" aria-label="Search" />
 
 		<br/>
-
+		<div className='row'>
 			{
 			 this.state.data.map((data) =>{
 			 const regEx = new RegExp(this.state.searchElement, 'g');
 			 let roomLink = "/room/" + data._id;
 			 return (regEx.test(data.room_name) || regEx.test(data.room_type)) &&
-			 	( <div>
+			 	( <div className='col-4'>
 					<Link to={roomLink} onClick={() => this.joinRoom(data)} className="btn btn-light btn-block">
 					 <h4>{data.room_name}</h4>
 					 <h6>Current Topic: {data.room_type}</h6>
@@ -87,7 +87,7 @@ export default class ElementThree extends Component {
 				)
 				}
 			 )
-			}
+			}</div>
             </div></div>
         )
     }
