@@ -70,10 +70,10 @@ class App extends Component {
                   <li className="navbar-item">
                    <button className="btn btn-outline-dark" onClick={this.logOut}>Logout</button>
                    </li>
+                </ul>
                 )
               }
 
-                </ul>
               </div>
           </nav>
           <br/>
