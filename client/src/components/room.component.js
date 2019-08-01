@@ -122,9 +122,13 @@ export default class ElementSix extends Component {
           
           <div className="col-9">
             <div>
-              <div className="input-group">
-                <input type="text" className="form-control ml-5" value={this.state.name_element} onChange={this.changeName} placeholder="Enter Name" />
-                <div className="input-group-append"><button onClick={this.setName} disabled={!this.state.name_element} className="btn btn-dark btn-sm">Change Name</button></div>
+            {
+                (!localStorage.getItem('user')) &&
+                  (<div className="input-group">
+                  <input type="text" className="form-control ml-5" value={this.state.name_element} onChange={this.changeName} placeholder="Enter Name" />
+                  <div className="input-group-append"><button onClick={this.setName} disabled={!this.state.name_element} className="btn btn-dark btn-sm">Change Name</button></div>
+                  </div>)
+            }
               </div>
               <div className="chatBox">
                 {this.chat}
