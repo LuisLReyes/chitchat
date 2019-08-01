@@ -54,29 +54,34 @@ export default class ElementFour extends Component {
 
   render() {
       return (
-          <div className="row">
-            <div>
-              <label>
-                Room Name
+          <div className="row justify-content-center">
+
+            <div className="col-5">
+            <div className="input-group">
+            <span className="input-group-text" id="basic-addon1">
+              Room Name
+            </span>
                 <input
                   className="form-control"
                   type="text" value={this.state.groupName}
                   id= {'setGroupName'}
                   onChange={this.changeGroupName}
+                  placeholder="Room Name"
                 />
-              </label>
             </div>
-            <div>
-              <label>
-                Topic
+            <div className="input-group">
+            <span className="input-group-text" id="basic-addon1">
+              Room Topic
+            </span>
                 <input
                   className="form-control"
                   type="text" value={this.state.groupTopic}
                   id= {'setGroupTopic'}
                   onChange={this.changeGroupTopic}
+                  placeholder="Room Topic"
                 />
-              </label>
             </div>
+            <br/>
             <button className="btn btn-primary btn-block" onClick={this.createGroup} >Create New Room!</button>
 
             <br/>
@@ -85,6 +90,7 @@ export default class ElementFour extends Component {
                 <div className="alert alert-danger">{this.state.errorMessage}</div>
 
               }
+          </div>
 
           </div>
       )
