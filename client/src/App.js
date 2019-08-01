@@ -50,7 +50,6 @@ class App extends Component {
   render() {
     return (
       <Router>
-	<a style={{backgroundColor: #414141}}></a>
         <div className="container justify-content-between">
           <nav className="navbar navbar-expand-lg navbar-light bg-light">
             <a className="navbar-brand" href="https://google.com" target="_blank">
