@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import logo from './logo-light.png';
 import "bootstrap/dist/css/bootstrap.min.css";
-
+import "./App.css";
 import elementLogin from "./components/login.component";
 import elementHome from "./components/home.component";
 import elementRooms from "./components/addroom.component";
