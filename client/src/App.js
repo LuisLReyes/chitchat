@@ -64,7 +64,7 @@ class App extends Component {
                 (!localStorage.getItem('user')) &&
                   (<ul className="navbar-nav mr-auto">
                     <li className="navbar-item">
-                      <Link to="/login" className="nav-link">Login</Link>
+                      <Link to="/login" className="btn btn-outline-dark">Login</Link>
                     </li>
                 </ul>)
               }
