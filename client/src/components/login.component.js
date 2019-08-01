@@ -87,6 +87,7 @@ export default class ElementOne extends Component {
             console.log(res.data);
             localStorage.setItem('user',JSON.stringify(res.data));
             this.props.history.push("/");
+            window.location.reload();
         })
         .catch(error =>{
           this.setState({
