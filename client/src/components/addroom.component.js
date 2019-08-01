@@ -57,9 +57,13 @@ export default class ElementThree extends Component {
                   <p className="mr-1">Your Rooms</p>
                 </div>
                 <div className="col">
-                  <Link to="/newroom" className="btn-primary btn-sm ml-5">
-                    +
-                  </Link>
+		{
+		(localStorage.getItem('user')) &&
+                	(<Link to="/newroom" className="btn btn-primary btn-block mb-4">
+                	Create New Study Room
+                	</Link>
+		)
+		}
                 </div>
               </div>
             </div>
