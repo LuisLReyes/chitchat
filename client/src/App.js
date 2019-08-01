@@ -5,7 +5,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 
 import elementLogin from "./components/login.component";
 import elementHome from "./components/home.component";
-import elementAddRoom from "./components/addroom.component";
+import elementRooms from "./components/addroom.component";
 import elementNewRoom from "./components/newroom.component";
 import elementRoom from "./components/room.component";
 import elementOne from "./components/element-one.component";
@@ -32,8 +32,7 @@ class App extends Component {
       loggedIn:false,
 		}
 
-    this.changeName = this.changeName.bind(this);
-    this.setName = this.setName.bind(this);
+    
 
     console.log("Checking for logged in user in App.js...");
     console.log(JSON.parse(localStorage.getItem('user')));
@@ -41,17 +40,9 @@ class App extends Component {
   }
 
 
-  changeName(event){
-    this.setState({
-      name_element: event.target.value
-    });
-  }
+  
 
-  setName(){
-    this.setState({
-      name: this.state.name_element
-    });
-  }
+  
 
   render() {
     return (
@@ -63,16 +54,11 @@ class App extends Component {
               {/*<img src={} width="30" height="30" alt="google.com" />*/}
             </a>
               <div className="col-7">
-                <Link to="/" className="navbar-brand">Hello, {this.state.name}</Link>
+                <h1><Link to="/rooms" >Chit-Chat</Link></h1>
               </div>
               <div className="col-6 collapse navbar-collapse">
                 <ul className="navbar-nav mr-auto">
-                    <li className="navbar-item">
-                      <div className="input-group">
-                        <input type="text" className="form-control ml-5" value={this.state.name_element} onChange={this.changeName} placeholder="Enter Name" />
-                        <div className="input-group-append"><button onClick={this.setName} disabled={!this.state.name_element} className="btn btn-dark btn-sm">Change Name</button></div>
-                      </div>
-                    </li>
+                    
                     <li className="navbar-item">
                       <Link to="/login" className="nav-link">Login</Link>
                     </li>
@@ -98,7 +84,7 @@ class App extends Component {
             <div className="col-8">
               <Route path="/" exact component={elementHome} />
               <Route path="/login" component={elementLogin} />
-              <Route path="/addroom" component={elementAddRoom} />
+              <Route path="/rooms" component={elementRooms} />
               <Route path="/testing" component={elementOne} />
               <Route path="/newroom" component={elementNewRoom} />
               <Route path="/room/:id" component={elementRoom} />

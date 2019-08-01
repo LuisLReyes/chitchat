@@ -27,8 +27,12 @@ export default class ElementSix extends Component {
         message:'',
         user: temp,
         //Used to test tick
-        seconds : 0
+        seconds : 0,
+        name_element:''
       }
+
+      this.changeName = this.changeName.bind(this);
+      this.setName = this.setName.bind(this);
     
   }
   //Tick function that goes off every X milliseconds that are specified in componentDidMount()
@@ -70,6 +74,19 @@ export default class ElementSix extends Component {
       console.log(this.state.message);
       this.setState({message: ''})
   }
+
+  changeName(event){
+    this.setState({
+      name_element: event.target.value
+    });
+  }
+
+  setName(){
+    this.setState({
+      user: this.state.name_element
+    });
+  }
+
   //Helper function to get group information
   GetGroupFromUrl(passedId){
     axios.get('https://chit-chat-4331.herokuapp.com/chatroom/'+passedId )
@@ -101,11 +118,17 @@ export default class ElementSix extends Component {
       render(){
         return(
           <div>
-              <div className="chatBox">
+            <div className="input-group">
+              <input type="text" className="form-control ml-5" value={this.state.name_element} onChange={this.changeName} placeholder="Enter Name" />
+              <div className="input-group-append"><button onClick={this.setName} disabled={!this.state.name_element} className="btn btn-dark btn-sm">Change Name</button></div>
+            </div>
+
+
+            <div className="chatBox">
                   {this.chat}
-              </div>
-              <input className="form-control" type="text" ref={this.textInput} value={this.state.message} onChange={this.handleChange}/>
-              <button className="btn btn-primary btn-block" onClick={this.handleSubmit}>Send</button>
+            </div>
+            <input className="form-control" type="text" ref={this.textInput} value={this.state.message} onChange={this.handleChange}/>
+            <button className="btn btn-primary btn-block" onClick={this.handleSubmit}>Send</button>
           </div>
         )
       }
