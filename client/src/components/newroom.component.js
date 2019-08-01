@@ -54,7 +54,7 @@ export default class ElementFour extends Component {
 
   render() {
       return (
-          <div>
+          <div className="row">
             <div>
               <label>
                 Group Name

@@ -8,7 +8,6 @@ import elementHome from "./components/home.component";
 import elementRooms from "./components/addroom.component";
 import elementNewRoom from "./components/newroom.component";
 import elementRoom from "./components/room.component";
-import elementOne from "./components/element-one.component";
 
 
 class App extends Component {
@@ -70,7 +69,6 @@ class App extends Component {
               <Route path="/" exact component={elementHome} />
               <Route path="/login" component={elementLogin} />
               <Route path="/rooms" component={elementRooms} />
-              <Route path="/testing" component={elementOne} />
               <Route path="/newroom" component={elementNewRoom} />
               <Route path="/room/:id" component={elementRoom} />
             
