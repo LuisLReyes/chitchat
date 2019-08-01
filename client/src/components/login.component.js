@@ -26,6 +26,8 @@ export default class ElementOne extends Component {
       this.handleRegister = this.handleRegister.bind(this);
       this.changeForm = this.changeForm.bind(this);
       this.verifyPassword = this.verifyPassword.bind(this);
+      console.log('Checking local storage');
+      console.log(JSON.parse(localStorage.getItem('user')));
     }
 
     changeUsername(event){
@@ -83,6 +85,7 @@ export default class ElementOne extends Component {
         })
         .then(res=> {
             console.log(res.data);
+            localStorage.setItem('user',JSON.stringify(res.data._id));
         })
     }
 

@@ -24,6 +24,8 @@ class App extends Component {
 
     this.changeName = this.changeName.bind(this);
     this.setName = this.setName.bind(this);
+
+    console.log(JSON.parse(localStorage.getItem('user')));
   }
 
 
