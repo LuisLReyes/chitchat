@@ -34,7 +34,7 @@ export default class ElementSix extends Component {
 
       this.changeName = this.changeName.bind(this);
       this.setName = this.setName.bind(this);
-    
+
   }
   //Tick function that goes off every X milliseconds that are specified in componentDidMount()
   tick() {
@@ -58,7 +58,7 @@ export default class ElementSix extends Component {
     //Call function using ID in URL
     this.GetGroupFromUrl(params.id);
 
-    
+
   }
 
   componentWillUnmount() {
@@ -119,7 +119,7 @@ export default class ElementSix extends Component {
       render(){
         return(
         <div className="row">
-          
+
           <div className="col-9">
             <div>
             {
@@ -137,7 +137,6 @@ export default class ElementSix extends Component {
               <button className="btn btn-primary btn-block" onClick={this.handleSubmit}>Send</button>
               </div>
             </div>
-          </div>
         )
       }
 }
