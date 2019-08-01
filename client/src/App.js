@@ -66,30 +66,14 @@ class App extends Component {
               </div>
           </nav>
           <br/>
-          <div className="row">
-            <div className="col-3">
-              <div className="alert alert-secondary">
-              <div className="row">
-                <div className="col">
-                  <p className="mr-1">Your Rooms</p>
-                </div>
-                <div className="col">
-                  <Link to="/addroom" className="btn-primary btn-sm ml-5">
-                    +
-                  </Link>
-                </div>
-              </div>
-            </div>
-            </div>
-            <div className="col-8">
+            
               <Route path="/" exact component={elementHome} />
               <Route path="/login" component={elementLogin} />
               <Route path="/rooms" component={elementRooms} />
               <Route path="/testing" component={elementOne} />
               <Route path="/newroom" component={elementNewRoom} />
               <Route path="/room/:id" component={elementRoom} />
-            </div>
-          </div>
+            
         </div>
       </Router>
     );

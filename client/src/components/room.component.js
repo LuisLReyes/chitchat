@@ -2,6 +2,7 @@ import React, { Component, } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
 import "./room.css";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 export default class ElementSix extends Component {
   //Contruct the element
@@ -117,18 +118,21 @@ export default class ElementSix extends Component {
       //render the page's HTML
       render(){
         return(
-          <div>
-            <div className="input-group">
-              <input type="text" className="form-control ml-5" value={this.state.name_element} onChange={this.changeName} placeholder="Enter Name" />
-              <div className="input-group-append"><button onClick={this.setName} disabled={!this.state.name_element} className="btn btn-dark btn-sm">Change Name</button></div>
+        <div className="row">
+          
+          <div className="col-9">
+            <div>
+              <div className="input-group">
+                <input type="text" className="form-control ml-5" value={this.state.name_element} onChange={this.changeName} placeholder="Enter Name" />
+                <div className="input-group-append"><button onClick={this.setName} disabled={!this.state.name_element} className="btn btn-dark btn-sm">Change Name</button></div>
+              </div>
+              <div className="chatBox">
+                {this.chat}
+              </div>
+              <input className="form-control" type="text" ref={this.textInput} value={this.state.message} onChange={this.handleChange}/>
+              <button className="btn btn-primary btn-block" onClick={this.handleSubmit}>Send</button>
+              </div>
             </div>
-
-
-            <div className="chatBox">
-                  {this.chat}
-            </div>
-            <input className="form-control" type="text" ref={this.textInput} value={this.state.message} onChange={this.handleChange}/>
-            <button className="btn btn-primary btn-block" onClick={this.handleSubmit}>Send</button>
           </div>
         )
       }

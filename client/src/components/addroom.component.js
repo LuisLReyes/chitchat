@@ -48,7 +48,23 @@ export default class ElementThree extends Component {
 
 
         return (
-            <div>
+			
+            <div class="row">
+				<div className="col-3">
+            <div className="alert alert-secondary">
+              <div className="row">
+                <div className="col">
+                  <p className="mr-1">Your Rooms</p>
+                </div>
+                <div className="col">
+                  <Link to="/addroom" className="btn-primary btn-sm ml-5">
+                    +
+                  </Link>
+                </div>
+              </div>
+            </div>
+          </div>
+		  <div className="col-9">
                 <Link to="/newroom" className="btn btn-primary btn-block mb-4">
                 	Create New Study Room
                 </Link>
@@ -73,7 +89,7 @@ export default class ElementThree extends Component {
 				}
 			 )
 			}
-            </div>
+            </div></div>
         )
     }
 
