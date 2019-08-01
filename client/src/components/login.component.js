@@ -124,7 +124,7 @@ export default class ElementOne extends Component {
     render() {
         return (
             <div>
-            <p>Welcome to Chit-Chat.</p>
+            <h1>Welcome to Chit-Chat.</h1>
             <p>Log in to have access to enhanced features</p>
             <p>All required fields are denoted by an asterisk (*)</p>
 

@@ -4,7 +4,7 @@ export default class ElementTwo extends Component {
     render() {
         return (
             <div>
-                <p>Welcome back to Chit-Chat</p>
+                <h1>Welcome back to Chit-Chat</h1>
             </div>
         )
     }
