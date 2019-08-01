@@ -15,17 +15,29 @@ class App extends Component {
 
   constructor(props) {
 		super(props);
-		this.state = {
+    
+    var temp;
+      if(localStorage.getItem('user')){
+        temp = JSON.parse(localStorage.getItem('user')).first_name;
+      }
+      else{
+        temp = 'Anonymous';
+      }
+    
+    
+    this.state = {
       user:'',
       name_element:'',
-      name:'Anonymous',
+      name:temp,
       loggedIn:false,
 		}
 
     this.changeName = this.changeName.bind(this);
     this.setName = this.setName.bind(this);
 
+    console.log("Checking for logged in user in App.js...");
     console.log(JSON.parse(localStorage.getItem('user')));
+    //this.state.name= JSON.parse(localStorage.getItem('user')).first_name ;
   }
 
 

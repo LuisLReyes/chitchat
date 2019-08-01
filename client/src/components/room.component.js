@@ -11,17 +11,24 @@ export default class ElementSix extends Component {
     this.handleChange = this.handleChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
       //set variables to be access in the state
+      var temp;
+      if(localStorage.getItem('user')){
+        temp = JSON.parse(localStorage.getItem('user')).first_name;
+      }
+      else{
+        temp = 'Anonymous';
+      }
+      console.log("temp:" + temp);
       this.state ={
         groupId:'',
         groupName:'',
         groupTopic:'',
         groupChat:null,
         message:'',
-        user:'testuser',
+        user: temp,
         //Used to test tick
         seconds : 0
       }
-
     
   }
   //Tick function that goes off every X milliseconds that are specified in componentDidMount()
@@ -94,7 +101,7 @@ export default class ElementSix extends Component {
       render(){
         return(
           <div>
-              <div class="chatBox">
+              <div className="chatBox">
                   {this.chat}
               </div>
               <input className="form-control" type="text" ref={this.textInput} value={this.state.message} onChange={this.handleChange}/>
