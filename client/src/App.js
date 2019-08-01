@@ -66,7 +66,7 @@ class App extends Component {
           </nav>
           <br/>
             
-              <Route path="/" exact component={elementHome} />
+              <Route path="/" exact component={elementRooms} />
               <Route path="/login" component={elementLogin} />
               <Route path="/rooms" component={elementRooms} />
               <Route path="/newroom" component={elementNewRoom} />
