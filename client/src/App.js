@@ -56,11 +56,23 @@ class App extends Component {
                 <h1><Link to="/rooms" >Chit-Chat</Link></h1>
               </div>
               <div className="col-6 collapse navbar-collapse">
-                <ul className="navbar-nav mr-auto">
-                    
+                                  {
+                (!localStorage.getItem('user')) &&
+                  (<ul className="navbar-nav mr-auto">
                     <li className="navbar-item">
                       <Link to="/login" className="nav-link">Login</Link>
                     </li>
+                </ul>)
+              }
+              {
+                (localStorage.getItem('user')) &&
+                (<ul className="navbar-nav mr-auto">
+                  <li className="navbar-item">
+                   <button className="btn btn-outline-dark" onClick={this.logOut}>Logout</button>
+                   </li>
+                )
+              }
+
                 </ul>
               </div>
           </nav>
