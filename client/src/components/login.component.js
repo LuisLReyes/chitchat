@@ -84,6 +84,12 @@ export default class ElementOne extends Component {
         .then(res=> {
             console.log(res.data);
         })
+        .catch(error =>{
+          this.setState({
+            error: true,
+            error_message:'Invalid username or password'
+          })
+        })
     }
 
     handleRegister(){
@@ -109,114 +115,120 @@ export default class ElementOne extends Component {
 
 
 
+
     render() {
         return (
             <div>
             <p>Welcome to Chit-Chat.</p>
             <p>Log in to have access to enhanced features</p>
-            <div>
-              {
-                this.state.error &&
-                  <div className="alert alert-danger">{this.state.error_message}</div>
-              }
-            </div>
+            <p>All required fields are denoted by an asterisk (*)</p>
 
                 <div className="row justify-content-center">
-                  <div>
+                  <div className="col-8">
+                  {
+                    this.state.error &&
+                      <div className="alert alert-danger">{this.state.error_message}</div>
+                  }
+                  <div className="input-group">
+                    <span className="input-group-text" id="basic-addon1">
+                      Username (*)
+                    </span>
 
-                    <label>
-                      Username
                       <input
                         className="form-control"
-                        placeholder="username"
                         type="text" value={this.state.username}
                         onChange={this.changeUsername}
+                        placeholder="Username"
                       />
-                    </label>
-                    <div>
+                      </div>
+
                     {
                       this.state.registerForm &&
                       (
-                        <label>
-                          Email
+
+                      <div className="input-group">
+                        <span className="input-group-text"id="basic-addon1">
+                          Email (*)
+                        </span>
                           <input
                             className="form-control"
-                            placeholder="johndoe@email.com"
                             type="text" value={this.state.email}
                             onChange={this.changeEmail}
+                            placeholder="Email"
                           />
-                        </label>
-                      )
-                    }
-                    </div>
 
-                    <div>
+                          </div>
+                      )}
+
                     {
                       this.state.registerForm &&
                       (
-                        <label>
-                          First Name
+                        <div className="input-group">
+                          <span className="input-group-text"id="basic-addon1">
+                            First Name (*)
+                          </span>
                           <input
                             className="form-control"
-                            placeholder="John"
                             type="text" value={this.state.first_name}
                             onChange={this.changeFirstName}
+                            placeholder="First Name"
                           />
-                        </label>
+                          </div>
                       )
                     }
-                    </div>
 
-                    <div>
                     {
                       this.state.registerForm &&
                       (
-                        <label>
-                          Last Name
+                        <div className="input-group">
+                          <span className="input-group-text"id="basic-addon1">
+                            Last Name
+                          </span>
                           <input
                             className="form-control"
-                            placeholder="doe"
                             type="text" value={this.state.last_name}
                             onChange={this.changeLastName}
+                            placeholder="Last Name"
                           />
-                        </label>
+                          </div>
                       )
                     }
-                    </div>
 
-                    <div>
-                    <label>
-                      Password
+
+                    <div className="input-group">
+                      <span className="input-group-text"id="basic-addon1">
+                        Password (*)
+                      </span>
                        <input
                         className="form-control"
-                        placeholder="password"
                         type="password" value={this.state.password}
                         onChange={this.changePassword}
+                        placeholder="Password"
                       />
-                    </label>
                     </div>
 
-                    <div>
+
                     {
                       this.state.registerForm &&
                       (
-                        <label>
-                          Verify Password
+                        <div className="input-group">
+                          <span className="input-group-text"id="basic-addon1">
+                            Verify Password (*)
+                          </span>
                           <input
                             className="form-control"
-                            placeholder="password"
                             type="password"
                             onChange={this.verifyPassword}
+                            placeholder="Verify Password"
                           />
-                        </label>
+                          </div>
                       )
                     }
-                    </div>
               </div>
           </div>
-
+          <br/>
                 <div className="row justify-content-center">
-                  <div className="col-4">
+                  <div>
                     {
                       this.state.registerForm ?
                         (  <button className="btn btn-info btn-block" disabled={!this.state.username || !this.state.first_name || !this.state.email || !this.state.passwordsMatch} onClick={this.handleRegister} >Register</button>)
@@ -224,16 +236,14 @@ export default class ElementOne extends Component {
                         (<button className="btn btn-primary btn-block" disabled={!this.state.username || !this.state.password} onClick={this.handleLogin} >Login</button>)
                     }
 
-                    <br/>
 
-                    <button onClick={this.changeForm} className="btn btn-small btn-outline-secondary">
                     {
                       this.state.registerForm ?
-                        (  <p>Have an account already? Log In!</p>)
+                        (  <button onClick={this.changeForm} className="btn  btn-outline-secondary">Have an account already? Log In!</button> )
                         :
-                        (<p>Don't Have an account? Register here!</p>)
+                        ( <button onClick={this.changeForm} className="btn  btn-outline-secondary">Don't Have an account? Register here!</button> )
                     }
-                    </button>
+
 
                     <br/>
                 </div>
