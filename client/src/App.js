@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { BrowserRouter as Router, Route, Link } from "react-router-dom";
-
+import logo from './logo-light.png';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import elementLogin from "./components/login.component";
@@ -57,7 +57,7 @@ class App extends Component {
               {/*<img src={} width="30" height="30" alt="google.com" />*/}
             </a>
               <div className="col-7">
-                <h1><Link to="/rooms" >Chit-Chat</Link></h1>
+                <Link to="/rooms" ><img className="img-responsive" src={require("./logo-light.png")} alt="logo"/></Link>
               </div>
               <div className="col-6 collapse navbar-collapse">
                                   {
