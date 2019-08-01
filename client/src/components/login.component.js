@@ -129,7 +129,7 @@ export default class ElementOne extends Component {
             <p>All required fields are denoted by an asterisk (*)</p>
 
                 <div className="row justify-content-center">
-                  <div className="col-8">
+                  <div className="col-5">
                   {
                     this.state.error &&
                       <div className="alert alert-danger">{this.state.error_message}</div>
