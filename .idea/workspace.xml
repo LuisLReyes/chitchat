@@ -2,109 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a6879066-a9d5-4c6a-908c-97c2d22ea4e7" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/client/acorn" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/acorn.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/ansi-html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/ansi-html.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/atob" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/atob.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/autoprefixer" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/autoprefixer.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/babylon" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/babylon.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/browserslist.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css-blank-pseudo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css-blank-pseudo.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css-has-pseudo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css-has-pseudo.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css-prefers-color-scheme" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/css-prefers-color-scheme.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/cssesc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/cssesc.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/detect" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/detect-port" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/detect-port.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/detect.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/errno" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/errno.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/escodegen" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/escodegen.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/esgenerate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/esgenerate.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/eslint" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/eslint.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/esparse" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/esparse.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/esvalidate" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/esvalidate.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/handlebars" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/handlebars.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/he" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/he.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/html-minifier" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/html-minifier.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/import-local-fixture" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/import-local-fixture.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/is-ci" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/is-ci.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jest" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jest-runtime" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jest-runtime.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jest.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js-yaml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/js-yaml.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jsesc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/jsesc.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/json5" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/json5.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/loose-envify" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/loose-envify.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/miller-rabin" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/miller-rabin.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/mime" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/mime.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/mkdirp" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/mkdirp.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/multicast-dns" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/multicast-dns.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/parser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/parser.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/react-scripts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/react-scripts.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/regexp-tree" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/regexp-tree.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/regjsparser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/regjsparser.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/rimraf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/rimraf.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sane" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sane.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/semver" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/semver.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sha.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sha.js.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sshpk-conv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sshpk-conv.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sshpk-sign" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sshpk-sign.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sshpk-verify" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/sshpk-verify.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/svgo" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/svgo.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/terser" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/terser.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/uglifyjs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/uglifyjs.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/uuid" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/uuid.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/watch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/watch.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/webpack" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/webpack-dev-server" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/webpack-dev-server.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/webpack.cmd" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/which" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/client/which.cmd" beforeDir="false" />
+      <change afterPath="$PROJECT_DIR$/client/src/components/room.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/client/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/client/src/components/room.component.js" beforeDir="false" afterPath="$PROJECT_DIR$/client/src/components/room.component.js" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -124,22 +25,15 @@
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/public/index.html">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/package.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="561">
-              <caret line="33" selection-start-line="33" selection-end-line="33" />
+            <state relative-caret-position="391">
+              <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+              <folding>
+                <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+                <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+              </folding>
             </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/package-lock.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-213737" />
           </provider>
         </entry>
       </file>
@@ -155,28 +49,10 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/node_modules/react-dev-utils/node_modules/browserslist/node.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="262" selection-start-line="262" selection-end-line="262" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/node_modules/react-dev-utils/browsersHelper.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="44" column="31" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/client/src/components/room.component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+            <state relative-caret-position="251">
+              <caret line="95" column="15" selection-start-line="95" selection-start-column="15" selection-end-line="95" selection-end-column="15" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -185,28 +61,36 @@
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/client/.gitignore">
+        <entry file="file://$PROJECT_DIR$/client/src/components/room.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="102">
-              <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+            <state relative-caret-position="68">
+              <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/plugins/JavaScriptLanguage/jsLanguageServicesImpl/external/lib.dom.d.ts">
+        <entry file="file://$PROJECT_DIR$/client/src/App.css">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/home.component.js">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/client/src/components/addroom.component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="158">
-              <caret line="17831" column="12" selection-start-line="17831" selection-start-column="12" selection-end-line="17831" selection-end-column="12" />
-            </state>
+            <state relative-caret-position="-888" />
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/client/src/components/register.component.js">
+        <entry file="file://$PROJECT_DIR$/client/src/components/editgroup.component.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1173">
-              <caret line="69" column="24" selection-start-line="64" selection-start-column="23" selection-end-line="69" selection-end-column="24" />
+            <state relative-caret-position="231">
+              <caret line="52" column="42" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="42" />
               <folding>
                 <element signature="e#0#42#0" expanded="true" />
               </folding>
@@ -216,14 +100,24 @@
       </file>
     </leaf>
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/client/src/components/room.component.js" />
         <option value="$PROJECT_DIR$/client/.gitignore" />
+        <option value="$PROJECT_DIR$/client/public/index.html" />
+        <option value="$PROJECT_DIR$/client/src/room.css" />
+        <option value="$PROJECT_DIR$/client/src/components/room.component.js" />
+        <option value="$PROJECT_DIR$/client/src/components/room.css" />
       </list>
     </option>
   </component>
@@ -274,6 +168,10 @@
               <item name="chitchat" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="chitchat" type="b2602c69:ProjectViewProjectNode" />
+              <item name="External Libraries" type="bcb0276e:PhpExternalLibrariesNodePatcher$PatchedExternalLibrariesNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -283,7 +181,8 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/client/src/components" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -293,6 +192,14 @@
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
     <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\PierceC7\Documents\chitchat\client\src\components" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\PierceC7\Documents\chitchat\client\src\components" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -383,14 +290,15 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="10488000" />
+    <option name="totallyTimeSpent" value="14678000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="762" y="0" width="781" height="870" extended-state="0" />
+    <frame x="-7" y="-7" width="1550" height="878" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.498" visible="true" weight="0.7545076" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" sideWeight="0.902" visible="true" weight="0.36510068" />
       <window_info id="Structure" order="1" sideWeight="0.502" side_tool="true" weight="0.25302014" />
-      <window_info id="npm" order="2" sideWeight="0.502" side_tool="true" weight="0.25302014" />
+      <window_info id="npm" order="2" sideWeight="0.098" side_tool="true" weight="0.36510068" />
       <window_info id="Favorites" order="3" sideWeight="0.5013405" side_tool="true" weight="0.25302014" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" visible="true" weight="0.33333334" />
@@ -424,11 +332,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/addroom.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-693" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/element-one.component.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-98">
@@ -442,9 +345,6 @@
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/client/src/components/element-three.component.js">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/home.component.js">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/models/chatroom.model.js">
@@ -472,19 +372,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/register.component.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1173">
-          <caret line="69" column="24" selection-start-line="64" selection-start-column="23" selection-end-line="69" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#42#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/client/public/index.html">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/register.component.js" />
     <entry file="file://$PROJECT_DIR$/client/package.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="561">
@@ -492,9 +380,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/browserslist">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
+    <entry file="file://$PROJECT_DIR$/client/browserslist" />
     <entry file="file://$PROJECT_DIR$/client/node_modules/react-dev-utils/browsersHelper.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="44">
@@ -530,20 +416,63 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/src/components/room.component.js">
+    <entry file="file://$PROJECT_DIR$/client/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="55" column="42" selection-start-line="55" selection-start-column="42" selection-end-line="55" selection-end-column="42" />
+        <state relative-caret-position="102">
+          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/index.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/home.component.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/addroom.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-888" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/editgroup.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="231">
+          <caret line="52" column="42" selection-start-line="52" selection-start-column="18" selection-end-line="52" selection-end-column="42" />
           <folding>
             <element signature="e#0#42#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/client/.gitignore">
+    <entry file="file://$PROJECT_DIR$/client/public/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="6" column="1" selection-start-line="6" selection-start-column="1" selection-end-line="6" selection-end-column="1" />
+        <state relative-caret-position="391">
+          <caret line="23" column="32" selection-start-line="23" selection-start-column="32" selection-end-line="23" selection-end-column="32" />
+          <folding>
+            <element signature="n#style#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+            <element signature="n#style#0;n#div#0;n#body#0;n#html#0;n#!!top" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/App.css">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/room.component.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="251">
+          <caret line="95" column="15" selection-start-line="95" selection-start-column="15" selection-end-line="95" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/client/src/components/room.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="24" selection-start-line="4" selection-start-column="24" selection-end-line="4" selection-end-column="24" />
         </state>
       </provider>
     </entry>

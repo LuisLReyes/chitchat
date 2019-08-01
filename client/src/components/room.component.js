@@ -1,6 +1,7 @@
 import React, { Component, } from 'react';
 import "bootstrap/dist/css/bootstrap.min.css";
 import axios from 'axios';
+import "./room.css";
 
 export default class ElementSix extends Component {
   //Contruct the element
@@ -76,7 +77,9 @@ export default class ElementSix extends Component {
             //log the state to ensure everything is working as intended
             console.log(this.state);
             this.chat = this.state.groupChat.map((item,key) =>
-              <li key ={item.id}>{item.user}: {item.message}</li>
+                <div class="message">
+                    <p key ={item.id}>{item.user}: {item.message}</p>
+                </div>
             );
         })
   }
@@ -91,13 +94,11 @@ export default class ElementSix extends Component {
       render(){
         return(
           <div>
-            Seconds: {this.state.seconds}
-              <input type="text" ref={this.textInput} value={this.state.message} onChange={this.handleChange}/>
-              <button onClick={this.handleSubmit}/>
-              <p>
-                {this.chat}
-              </p>
-              
+              <div class="chatBox">
+                  {this.chat}
+              </div>
+              <input className="form-control" type="text" ref={this.textInput} value={this.state.message} onChange={this.handleChange}/>
+              <button className="btn btn-primary btn-block" onClick={this.handleSubmit}>Send</button>
           </div>
         )
       }
